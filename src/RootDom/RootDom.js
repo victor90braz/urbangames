@@ -1,4 +1,6 @@
 import ReactDOM from "react-dom/client";
 
-const rootElement = document.getElementById("root");
-export const elementDom = ReactDOM.createRoot(rootElement);
+const getRootElement = document.getElementById("root");
+const elementDom = ReactDOM.createRoot(getRootElement);
+
+export default elementDom;

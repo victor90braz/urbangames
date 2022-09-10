@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -48,6 +49,22 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^27.5.1",
     "prettier": "^2.7.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/indexStyle.js",
+      "!src/reportWebVitals.js",
+      "!src/RootDom/RootDom.js",
+      "!src/setupTests.js",
+      "!.eslintrc.js",
+      "!coverage/*/.js",
+      "!src/**/*.test.js",
+      "!src/**/*.test.js.snap",
+      "!src/react-app-env.d.ts",
+      "!src/**/*.snap"
+    ]
   }
 }

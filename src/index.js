@@ -1,6 +1,6 @@
-import reportWebVitals from "./reportWebVitals";
 import React from "react";
-import { elementDom } from "./RootDom/RootDom";
+import reportWebVitals from "./reportWebVitals";
+import elementDom from "./RootDom/RootDom";
 import App from "./App/App";
 import IndexStyle from "./indexStyle";
 
