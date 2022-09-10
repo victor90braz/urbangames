@@ -1,7 +1,12 @@
-import React from "react";
 import reportWebVitals from "./reportWebVitals";
-import { root } from "./rootDom";
+import React from "react";
+import { elementDom } from "./RootDom/RootDom";
+import App from "./App/App";
+import IndexStyle from "./indexStyle";
 
-root.render(<h1>Hola Mundo!</h1>);
-
+elementDom.render(
+  <IndexStyle>
+    <App />
+  </IndexStyle>
+);
 reportWebVitals();
