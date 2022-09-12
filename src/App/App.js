@@ -1,23 +1,40 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import getWords from "../utils/utils";
+import getWords from "../utils/utilsFunctions";
+
 import AppStyle from "./AppStyle";
 
 function App() {
-  const catFactUrl = "https://catfact.ninja/fact";
+  const GIPHY_API_KEY = "IavaWn74uj0EqfhTYrZvVaGqRT2Bk5p6";
+  const string = "gif";
+
+  const urlCatFact = "https://catfact.ninja/fact";
+  const urlGiphy = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${string}`;
 
   const [catFact, setCatFact] = useState("");
+  const [giphy, setGiphy] = useState("");
 
   const showFirst3Words = getWords(catFact, 0, 3);
 
   useEffect(() => {
     (async () => {
-      const { data: dataCatFact } = await axios.get(catFactUrl);
+      const { data: dataCatFact } = await axios.get(urlCatFact);
 
       setCatFact(dataCatFact);
 
       // eslint-disable-next-line no-console
       console.log(dataCatFact.fact);
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      const dataCatFact = await axios.get(urlGiphy);
+
+      setGiphy(dataCatFact.data.data[0].images.original.url);
+
+      // eslint-disable-next-line no-console
+      console.log(dataCatFact.data.data[0].images.original.url);
     })();
   }, []);
 
@@ -34,15 +51,15 @@ function App() {
 
           <h3>Show First 3 Words:</h3>
           <ul>
-            <li>
-              <p>{showFirst3Words}</p>
-            </li>
+            <li>{showFirst3Words}</li>
           </ul>
         </div>
 
         <div className="container-giphy">
-          <h2>Giphy API</h2>
-          <p>{catFact.fact}</p>
+          <center>
+            <h2>Giphy API</h2>
+            <img src={giphy} alt={giphy} width="100%" height="auto" />
+          </center>
         </div>
       </main>
     </AppStyle>
