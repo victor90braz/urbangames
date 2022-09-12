@@ -1,12 +1,12 @@
 # consume REST API:
 
-## Cat Fact API: https://catfact.ninja/
+Cat Fact API: https://catfact.ninja/
 
-## GIPHY: https://developers.giphy.com/
+GIPHY: https://developers.giphy.com/
 
 # Deploy
 
-## Netlify: https://master--victorbraz-axios-api.netlify.app/
+Netlify: https://master--victorbraz-axios-api.netlify.app/
 
 # Tecnologies:
 
@@ -19,7 +19,6 @@ My Project Structure
 Guiding Principles
 
 1. On testing
-2. Naming your component files
-3. Separate your pages from your components
-4. Keep styled components in your component files
-5. Split things out only when you need to
+2. Naming of component files
+3. Keep styled components for each component files
+4. Split things out only when it needs to
