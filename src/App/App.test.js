@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders Hello World link", async () => {
+test("renders Cat Fact API link", async () => {
   render(<App />);
-  const linkElement = await screen.getByText(/Hello World/i);
+  const linkElement = await screen.getByText(/Cat Fact API/i);
   expect(linkElement).toBeInTheDocument();
 });
