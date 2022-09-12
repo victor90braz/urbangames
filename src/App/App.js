@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import getFirst3Words from "../utils/utils";
 import AppStyle from "./AppStyle";
 
 function App() {
   const [facts, setFacts] = useState("");
+  const showFirst3Words = getFirst3Words(facts);
 
   useEffect(() => {
     (async () => {
@@ -15,8 +17,9 @@ function App() {
 
   return (
     <AppStyle>
-      <h1>Hello World</h1>
+      <h1>Cat Fact API</h1>
       <p>{facts.fact}</p>
+      <p>{showFirst3Words}</p>
     </AppStyle>
   );
 }
