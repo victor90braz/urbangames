@@ -1,3 +1,4 @@
-const getFirst3Words = (prop) => prop.fact?.split(" ").slice(0, 3).join(" ");
+const getWords = (word, start, end) =>
+  word.fact?.split(" ").slice(start, end).join(" ");
 
-export default getFirst3Words;
+export default getWords;
