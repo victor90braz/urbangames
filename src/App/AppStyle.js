@@ -17,6 +17,7 @@ const AppStyle = styled.div`
 
     .container-cat {
       border: 1px solid blue;
+
       h2 {
         font-size: 1.5rem;
       }
