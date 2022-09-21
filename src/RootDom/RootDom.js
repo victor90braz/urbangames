@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 
-const getRootElement = document.querySelector("#root");
-const elementDom = ReactDOM.createRoot(getRootElement);
+const container = document.querySelector("#container");
+const renderContainer = ReactDOM.createRoot(container);
 
-export default elementDom;
+export default renderContainer;

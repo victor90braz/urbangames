@@ -1,10 +1,10 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
-import elementDom from "./RootDom/RootDom";
+import renderContainer from "./rootDom/rootDom";
 import App from "./App/App";
 import IndexStyle from "./indexStyle";
 
-elementDom.render(
+renderContainer.render(
   <IndexStyle>
     <App />
   </IndexStyle>
