@@ -1,12 +1,6 @@
-# consume REST API:
-
-Cat Fact API: https://catfact.ninja/
-
-GIPHY: https://developers.giphy.com/
-
 # Deploy
 
-Netlify: https://master--victorbraz-axios-api.netlify.app/
+Netlify: https://victorbraz-urbangames.netlify.app/
 
 # Tecnologies:
 
