@@ -1,6 +1,6 @@
 import Brand from "../components/Brand/Brand";
 import MenuHamburger from "../components/MenuHamburguer/MenuHamburger";
-import VideoPlayer from "../components/VideoPlayer/VideoPlayer";
+import HomePage from "../pages/HomePage/HomePage";
 import AppStyle from "./AppStyle";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <MenuHamburger />
       </header>
       <main>
-        <VideoPlayer />
+        <HomePage />
       </main>
     </AppStyle>
   );
