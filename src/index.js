@@ -1,6 +1,6 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
-import renderContainer from "./rootDom/rootDom";
+import renderContainer from "./root/root";
 import App from "./App/App";
 import IndexStyle from "./indexStyle";
 
