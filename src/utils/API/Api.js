@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import getWords from "../../utils/utilsFunctions";
+import getWords from "../utilsFunctions";
 import ApiStyle from "./ApiStyle";
 
 function Api() {
