@@ -1,3 +1,4 @@
+import Slides from "../../components/Slides/Slides";
 import HomePageStyle from "./HomePageStyle";
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
           </button>
         </div>
       </div>
+      <Slides />
     </HomePageStyle>
   );
 }
