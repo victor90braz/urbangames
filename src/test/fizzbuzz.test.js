@@ -12,6 +12,7 @@ const fizzbuzz = (number) => {
   if (typeof number !== "number") throw new Error("Not a number");
   if (Number.isNaN(number)) throw new Error("Not a number, it returns null");
   if (number % 3 === 0) return "fizz";
+  if (number % 5 === 0) return "fizz";
   return number;
 };
 
@@ -52,5 +53,9 @@ describe("fizzbuzz", () => {
     expect(fizzbuzz(6)).toBe("fizz");
     expect(fizzbuzz(9)).toBe("fizz");
     expect(fizzbuzz(12)).toBe("fizz");
+  });
+
+  it("should return 'buzz' if number provided is multiple of 5", () => {
+    expect(fizzbuzz(10)).toBe("fizz");
   });
 });
