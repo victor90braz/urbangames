@@ -29,8 +29,8 @@ function HomePage() {
 
       {card.map((item) => (
         <div className="card" key={item}>
-          <h3 className="card-title">{item.title}</h3>
           <img className="card-img-top" src={item.image} alt="Card cap" />
+          <h3 className="card-title">{item.title}</h3>
         </div>
       ))}
 
