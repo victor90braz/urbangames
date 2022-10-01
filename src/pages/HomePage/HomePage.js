@@ -1,7 +1,13 @@
-import Slides from "../../components/Slides/Slides";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import HomePageStyle from "./HomePageStyle";
+import Slides from "../../components/Slides/Slides";
+import { AssetsCard, AssetsCardTitle } from "./HomePageAssets";
 
 function HomePage() {
+  const [containerTitle] = useState(AssetsCardTitle);
+  const [card] = useState(AssetsCard);
+
   return (
     <HomePageStyle>
       <div className="container-image">
@@ -13,7 +19,24 @@ function HomePage() {
           </button>
         </div>
       </div>
+
       <Slides />
+
+      <div className="card">
+        <h2 className="card-title">{containerTitle.title}</h2>
+        <p className="card-title">{containerTitle.text}</p>
+      </div>
+
+      {card.map((item) => (
+        <div className="card" key={item}>
+          <h3 className="card-title">{item.title}</h3>
+          <img className="card-img-top" src={item.image} alt="Card cap" />
+        </div>
+      ))}
+
+      <button type="button" disabled>
+        Download and play
+      </button>
     </HomePageStyle>
   );
 }
