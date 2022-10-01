@@ -19,4 +19,10 @@ describe("fizzbuzz", () => {
   it("should throw if not number is provided as parameter", () => {
     expect(() => fizzbuzz()).toThrow();
   });
+  it("should throw a specific message 'Not a number' if not number is provided as parameter", () => {
+    const callFunction = () => fizzbuzz();
+    const expectedError = "Not a number";
+
+    expect(callFunction).toThrow(expectedError);
+  });
 });
