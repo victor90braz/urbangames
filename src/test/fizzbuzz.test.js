@@ -8,10 +8,15 @@ Escribir una funcion que al pasarle un numero:
 - Muestra el numero si no es multiplo de 3 ni de 5
 */
 
-const fizzbuzz = () => {};
+const fizzbuzz = (number) => {
+  if (typeof number !== "number") throw new Error("Not a number");
+};
 
 describe("fizzbuzz", () => {
   it("should be a function", () => {
     expect(typeof fizzbuzz).toBe("function");
+  });
+  it("should throw if not number is provided as parameter", () => {
+    expect(() => fizzbuzz()).toThrow();
   });
 });
