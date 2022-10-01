@@ -1,4 +1,4 @@
-import videoSRC from "../../assets/assets";
+import videoSRC from "./VideoPlayerAssets";
 import VideoPlayerStyle from "./VideoPlayerStyle";
 
 function VideoPlayer() {

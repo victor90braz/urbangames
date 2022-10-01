@@ -31,6 +31,20 @@ const HomePageStyle = styled.div`
     font-weight: bold;
     color: black;
   }
+
+  .card {
+    h5 {
+      font-family: KoHo, sans-serif;
+      line-height: 1.5rem;
+      font-weight: 700 !important;
+      font-size: 2.25rem !important;
+      line-height: 2.5rem !important;
+    }
+    p {
+      font-size: 1.1rem !important;
+      line-height: 1.5rem !important;
+    }
+  }
 `;
 
 export default HomePageStyle;
