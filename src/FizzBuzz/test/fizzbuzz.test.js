@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import fizzbuzz from "../fizzbuzz";
 
 /*
 Escribir una funcion que al pasarle un numero:
@@ -7,16 +8,6 @@ Escribir una funcion que al pasarle un numero:
 - Muestra "fizzbuzz" si es multiplo de 3 y 5
 - Muestra el numero si no es multiplo de 3 ni de 5
 */
-
-const fizzbuzz = (number) => {
-  if (typeof number !== "number") throw new Error("Not a number");
-  if (Number.isNaN(number)) throw new Error("Not a number, it returns null");
-  if (number % 3 === 0 && number % 5 === 0) return "fizzbuzz";
-  if (number % 3 === 0) return "fizz";
-  if (number % 5 === 0) return "buzz";
-
-  return number;
-};
 
 describe("fizzbuzz", () => {
   it("should be a function", () => {
