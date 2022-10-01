@@ -11,6 +11,7 @@ Escribir una funcion que al pasarle un numero:
 const fizzbuzz = (number) => {
   if (typeof number !== "number") throw new Error("Not a number");
   if (Number.isNaN(number)) throw new Error("Not a number, it returns null");
+  return 1;
 };
 
 describe("fizzbuzz", () => {
@@ -32,5 +33,9 @@ describe("fizzbuzz", () => {
     const expectedError = "Not a number, it returns null";
 
     expect(callFunction).toThrow(expectedError);
+  });
+
+  it("should return 1 if number provided is 1", () => {
+    expect(fizzbuzz(1)).toBe(1);
   });
 });
