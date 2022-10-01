@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import fizzbuzz from "../fizzbuzz";
+import fizzbuzz from "./fizzbuzz";
 
 /*
 Escribir una funcion que al pasarle un numero:
@@ -13,9 +13,11 @@ describe("fizzbuzz", () => {
   it("should be a function", () => {
     expect(typeof fizzbuzz).toBe("function");
   });
+
   it("should throw if not number is provided as parameter", () => {
     expect(() => fizzbuzz()).toThrow();
   });
+
   it("should throw a specific message 'Not a number' if not number is provided as parameter", () => {
     const callFunction = () => fizzbuzz();
     const expectedError = "Not a number";
