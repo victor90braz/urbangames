@@ -8,7 +8,12 @@ const CanConfigure = (from, to) => {
   if (typeof to !== "string")
     throw new Error("second parameter is not a string");
 
-  if (from.length !== to.length) throw new Error("lengths are not equal");
+  const isSameLenght = from.length !== to.length;
+  if (isSameLenght) throw new Error("lengths are not equal");
+
+  const hasSameUniqueLetters = new Set(from).size === new Set(to).size;
+  if (!hasSameUniqueLetters)
+    throw new Error("strings provided have different number of unique letters");
 };
 
 describe("CanConfigure", () => {
@@ -30,9 +35,17 @@ describe("CanConfigure", () => {
     expect(callFunction).toThrow(expectedError);
   });
 
-  it("should return false if strings provided have differents length", () => {
+  it("should return message error if strings provided have differents length", () => {
     const callFunction = () => CanConfigure("abc", "de");
     const expectedError = new Error("lengths are not equal");
+    expect(callFunction).toThrow(expectedError);
+  });
+
+  it("should return message error if strings provided have different number of unique letters", () => {
+    const callFunction = () => CanConfigure("abc", "ddd");
+    const expectedError = new Error(
+      "strings provided have different number of unique letters"
+    );
     expect(callFunction).toThrow(expectedError);
   });
 });
