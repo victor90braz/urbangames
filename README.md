@@ -12,7 +12,7 @@ Folder structures for React apps
 My Project Structure
 Guiding Principles
 
-1. On testing
+1. Using Vitest - TDD
 2. Naming of component files
 3. Keep styled components for each component files
 4. Split things out only when it needs to
