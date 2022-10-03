@@ -1,30 +1,7 @@
 import { render, screen, cleanup } from "@testing-library/react";
 import { afterEach, describe, it, expect } from "vitest";
-
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const rows = [["7", "8", "9"], ["4", "5", "6"], ["1", "2", "3"], ["0"]];
-const operators = ["+", "-", "x", "÷"];
-
-function Calculator() {
-  return (
-    <section>
-      <h1>Calculator</h1>
-      <div role="grid">
-        {rows.map((row) => (
-          <div key={row} role="row">
-            {row.map((number) => (
-              <span key={number}>{number}</span>
-            ))}
-          </div>
-        ))}
-        {operators.map((operator) => (
-          <span key={operator}>{operator}</span>
-        ))}
-        <span>=</span>
-      </div>
-    </section>
-  );
-}
+import Calculator from "./Calculator";
+import { numbers, operators } from "./CalculatorAssets";
 
 describe("Calculator", () => {
   afterEach(cleanup);
@@ -61,5 +38,11 @@ describe("Calculator", () => {
     render(<Calculator />);
 
     screen.getByText("=");
+  });
+
+  it("should render an input", () => {
+    render(<Calculator />);
+
+    screen.getByRole("textbox");
   });
 });
