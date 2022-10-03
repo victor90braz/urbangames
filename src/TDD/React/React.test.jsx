@@ -3,6 +3,7 @@ import { afterEach, describe, it, expect } from "vitest";
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const rows = [["7", "8", "9"], ["4", "5", "6"], ["1", "2", "3"], ["0"]];
+const operators = ["+", "-", "x", "÷"];
 
 function Calculator() {
   return (
@@ -16,6 +17,10 @@ function Calculator() {
             ))}
           </div>
         ))}
+        {operators.map((operator) => (
+          <span key={operator}>{operator}</span>
+        ))}
+        <span>=</span>
       </div>
     </section>
   );
@@ -44,5 +49,17 @@ describe("Calculator", () => {
 
     const expectedRows = screen.getAllByRole("row");
     expect(expectedRows).toHaveLength(4);
+  });
+
+  it("should render operators", () => {
+    render(<Calculator />);
+
+    operators.map((operator) => screen.getByText(operator));
+  });
+
+  it("should render equal", () => {
+    render(<Calculator />);
+
+    screen.getByText("=");
   });
 });
