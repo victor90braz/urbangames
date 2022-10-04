@@ -25,9 +25,15 @@ function Calculator() {
           </div>
         ))}
         {operators.map((operator) => (
-          <span key={operator}>{operator}</span>
+          <button
+            type="button"
+            onClick={() => setInputValue(inputValue.concat(operator))}
+            key={operator}
+          >
+            {operator}
+          </button>
         ))}
-        <span>{equal}</span>
+        <button type="button">{equal}</button>
       </div>
     </section>
   );
