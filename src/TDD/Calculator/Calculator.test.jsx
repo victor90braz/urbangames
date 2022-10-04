@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { afterEach, describe, it, expect } from "vitest";
 import Calculator from "./Calculator";
 import { numbers, operators } from "./CalculatorAssets";
@@ -44,5 +44,15 @@ describe("Calculator", () => {
     render(<Calculator />);
 
     screen.getByRole("textbox");
+  });
+
+  it("should user input after clicking a number", () => {
+    render(<Calculator />);
+
+    const one = screen.getByText("1");
+    fireEvent.click(one);
+
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("1");
   });
 });

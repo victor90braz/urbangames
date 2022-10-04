@@ -1,16 +1,26 @@
-import { equal, numbers, operators, rows } from "./CalculatorAssets";
+import { useState } from "react";
+import { equal, operators, rows } from "./CalculatorAssets";
 
 function Calculator() {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <section>
       <h1>Calculator</h1>
-      <input type="text" />
+
+      <input type="text" value={inputValue} readOnly />
 
       <div role="grid">
-        {rows.map((row) => (
-          <div key={numbers} role="row">
+        {rows.map((row, idRow) => (
+          <div key={idRow.id} role="row">
             {row.map((number) => (
-              <span key={number}>{number}</span>
+              <button
+                type="button"
+                onClick={() => setInputValue(inputValue.concat(number))}
+                key={number}
+              >
+                {number}
+              </button>
             ))}
           </div>
         ))}
