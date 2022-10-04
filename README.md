@@ -4,7 +4,7 @@ Netlify: https://victorbraz-urbangames.netlify.app/
 
 # Tecnologies:
 
-    REACT|CSS|JAVASCRIPT|AXIOS|JEST|GIT
+    REACT|STYLE-COMPONENTS|JAVASCRIPT|AXIOS|JEST|GIT|TDD
 
 # Good practises
 
