@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { evaluate } from "mathjs";
 import { equal, operators, rows } from "./CalculatorAssets";
 
 function Calculator() {
@@ -24,16 +25,21 @@ function Calculator() {
             ))}
           </div>
         ))}
-        {operators.map((operator) => (
+        {operators.map((operator, idOperator) => (
           <button
             type="button"
             onClick={() => setInputValue(inputValue.concat(operator))}
-            key={operator}
+            key={idOperator.id}
           >
             {operator}
           </button>
         ))}
-        <button type="button">{equal}</button>
+        <button
+          type="button"
+          onClick={() => setInputValue(evaluate(inputValue))}
+        >
+          {equal}
+        </button>
       </div>
     </section>
   );
