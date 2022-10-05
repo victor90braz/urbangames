@@ -1,4 +1,4 @@
-const buttonDownload = {
+const DownloadContext = {
   text: "Download and play",
 };
-export default buttonDownload;
+export default DownloadContext;

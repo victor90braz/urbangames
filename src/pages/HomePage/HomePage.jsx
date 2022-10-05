@@ -30,7 +30,7 @@ function HomePage() {
       </div>
 
       {AssetsCard.map((item) => (
-        <div className="card" key={item}>
+        <div className="card" key={item.id}>
           <img className="card-img-top" src={item.image} alt="Card cap" />
           <h3 className="card-title">{item.title}</h3>
         </div>
