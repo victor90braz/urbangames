@@ -15,7 +15,7 @@ function HomePage() {
         <div className="container-text">
           <h2>{AssetsContainerText.title}</h2>
           <h3>{AssetsContainerText.text}</h3>
-          <button type="button">
+          <button type="button" disabled>
             <Download />
           </button>
         </div>
@@ -35,7 +35,7 @@ function HomePage() {
         </div>
       ))}
 
-      <button type="button">
+      <button type="button" disabled>
         <Download />
       </button>
     </HomePageStyle>

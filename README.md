@@ -12,7 +12,7 @@ Folder structures for React apps
 My Project Structure
 Guiding Principles
 
-1. Using Vitest - TDD
+1. @testing-library/react - TDD
 2. Naming of component files
 3. Keep styled components for each component files
 4. Split things out only when it needs to
@@ -20,10 +20,7 @@ Guiding Principles
 ## Currents Metrics
 
 🚀 TDD
-<img src=".tdd.png" width="600">
-
-🚀 Test
-<img src=".test.png" width="600">
+<img src="/images/tdd-test.jpg" width="600">
 
 🚀 Coverage
-<img src=".coverage.png" width="600">
+<img src="/images/test-coverage.jpg" width="600">
