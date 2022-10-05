@@ -68,15 +68,15 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "!src/index.js",
-      "!src/indexStyle.js",
-      "!src/reportWebVitals.js",
-      "!src/rootDom/rootDom.js",
-      "!src/setupTests.js",
-      "!.eslintrc.js",
-      "!coverage/*/.js",
-      "!src/**/*.test.js",
-      "!src/**/*.test.js.snap",
+      "!src/index.jsx",
+      "!src/indexStyle.jsx",
+      "!src/reportWebVitals.jsx",
+      "!src/rootDom/rootDom.jsx",
+      "!src/setupTests.jsx",
+      "!.eslintrc.jsx",
+      "!coverage/*/.jsx",
+      "!src/**/*.test.jsx",
+      "!src/**/*.test.jsx.snap",
       "!src/react-app-env.d.ts",
       "!src/**/*.snap"
     ]
