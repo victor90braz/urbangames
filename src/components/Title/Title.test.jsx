@@ -6,7 +6,7 @@ describe("Title", () => {
   it("should render a title", () => {
     render(<Title />);
 
-    screen.getByText("UrbanGames");
+    screen.getByText("UrbanGames", { level: 1 });
   });
 });
 

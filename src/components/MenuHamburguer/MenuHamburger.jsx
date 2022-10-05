@@ -4,7 +4,7 @@ import MenuHamburgerStyle from "./MenuHamburgerStyle";
 function MenuHamburger() {
   return (
     <MenuHamburgerStyle>
-      <GiHamburgerMenu className="menu-icon" />
+      <GiHamburgerMenu className="menu-icon" data-testid="idMenuHamburger" />
     </MenuHamburgerStyle>
   );
 }
