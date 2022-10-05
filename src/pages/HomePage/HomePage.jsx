@@ -1,21 +1,22 @@
-import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePageStyle from "./HomePageStyle";
 import Slides from "../../components/Slides/Slides";
-import { AssetsCard, AssetsCardTitle } from "./HomePageAssets";
+import {
+  AssetsCard,
+  AssetsCardTitle,
+  AssetsContainerText,
+} from "./HomePageAssets";
+import Download from "../../components/Download/Download";
 
 function HomePage() {
-  const [containerTitle] = useState(AssetsCardTitle);
-  const [card] = useState(AssetsCard);
-
   return (
     <HomePageStyle>
       <div className="container-image">
         <div className="container-text">
-          <h2>Play football</h2>
-          <h3>Anytime, anywhere.</h3>
-          <button type="button" disabled>
-            Download and play
+          <h2>{AssetsContainerText.title}</h2>
+          <h3>{AssetsContainerText.text}</h3>
+          <button type="button">
+            <Download />
           </button>
         </div>
       </div>
@@ -23,19 +24,19 @@ function HomePage() {
       <Slides />
 
       <div className="card">
-        <h2 className="card-title">{containerTitle.title}</h2>
-        <p className="card-title">{containerTitle.text}</p>
+        <h3 className="card-title">{AssetsCardTitle.title}</h3>
+        <p className="card-title">{AssetsCardTitle.text}</p>
       </div>
 
-      {card.map((item) => (
+      {AssetsCard.map((item) => (
         <div className="card" key={item}>
           <img className="card-img-top" src={item.image} alt="Card cap" />
           <h3 className="card-title">{item.title}</h3>
         </div>
       ))}
 
-      <button type="button" disabled>
-        Download and play
+      <button type="button">
+        <Download />
       </button>
     </HomePageStyle>
   );

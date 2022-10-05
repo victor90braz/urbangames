@@ -1,12 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it } from "vitest";
 import Title from "./Title";
+import { TitleAssets } from "./TitleAssets";
 
 describe("Title", () => {
   it("should render a title", () => {
     render(<Title />);
 
-    screen.getByText("UrbanGames", { level: 1 });
+    screen.getByText(TitleAssets.title);
   });
 });
 
