@@ -19,8 +19,10 @@ Guiding Principles
 
 ## Currents Metrics
 
-🚀 TDD
-<img src="/images/tdd-test.jpg" width="600">
+# 🚀 TDD
 
-🚀 Coverage
-<img src="/images/test-coverage.jpg" width="600">
+  <img src="./public/images/tdd-test.jpg" width="600">
+
+# 🚀 Coverage
+
+  <img src="./public/images/test-coverage.jpg" width="600">
