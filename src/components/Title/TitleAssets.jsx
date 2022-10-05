@@ -1,5 +1,5 @@
-export const TitleAssets = {
-  title: "UrbanSports",
+export const TitleApplication = {
+  title: "UrbanGames",
 };
 
-export default TitleAssets;
+export default TitleApplication;

@@ -1,12 +1,12 @@
 import BrandStyle from "./BrandStyle";
-import logoBrand from "./BrandAssets";
+import BrandAtributes from "./BrandAssets";
 
 function Brand() {
-  const pathImage = `images/${logoBrand}`;
+  const pathImage = `images/${BrandAtributes.image}`;
   return (
     <BrandStyle>
       <div className="brand">
-        <img src={pathImage} alt="logo" />
+        <img src={pathImage} alt={BrandAtributes.alt} />
       </div>
     </BrandStyle>
   );

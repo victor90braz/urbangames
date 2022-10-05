@@ -1,4 +1,6 @@
+import DownloadContext from "./DowloadAssets";
+
 function Download() {
-  return <span>Download and play</span>;
+  return <span>{DownloadContext.text}</span>;
 }
 export default Download;

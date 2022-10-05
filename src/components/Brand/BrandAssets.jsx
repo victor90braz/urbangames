@@ -1,3 +1,6 @@
-const logoBrand = "favicon.ico";
+const BrandAtributes = {
+  image: "favicon.ico",
+  alt: "Logo of the brand aplication",
+};
 
-export default logoBrand;
+export default BrandAtributes;

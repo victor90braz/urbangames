@@ -1,13 +1,20 @@
-import { render, screen } from "@testing-library/react";
-import { describe, it } from "vitest";
+import { cleanup, render, screen } from "@testing-library/react";
+import { afterEach, describe, it } from "vitest";
 import Title from "./Title";
-import { TitleAssets } from "./TitleAssets";
 
 describe("Title", () => {
-  it("should render a title", () => {
+  afterEach(cleanup);
+  it("should render a title of aplication", () => {
     render(<Title />);
 
-    screen.getByText(TitleAssets.title);
+    const expectedTitle = "UrbanGames";
+    screen.getByText(expectedTitle);
+  });
+
+  it("should render an element h1", () => {
+    render(<Title />);
+
+    screen.getByRole("heading", { level: 1 });
   });
 });
 

@@ -12,14 +12,17 @@ export const AssetsCard = [
   {
     title: "Download the app",
     image: "../images/messi.jpg",
+    id: 1,
   },
   {
     title: "Choose a game",
     image: "../images/messi.jpg",
+    id: 2,
   },
 
   {
     title: "Play!",
     image: "../images/messi.jpg",
+    id: 3,
   },
 ];

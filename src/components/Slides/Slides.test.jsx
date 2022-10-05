@@ -1,6 +1,7 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, it } from "vitest";
 import Slides from "./Slides";
+import SlidesImages from "./SlidesAssets";
 
 describe("Slides", () => {
   afterEach(cleanup);
@@ -15,8 +16,11 @@ describe("Slides", () => {
     screen.getAllByRole("heading", { level: 3 });
   });
 
-  it("should render an element h3 with a title text", () => {
+  it("should render an element title, image,description", () => {
     render(<Slides />);
-    screen.getByText("First slide label");
+
+    SlidesImages.forEach((slide) =>
+      screen.getByText(slide.title, slide.description, slide.image)
+    );
   });
 });
