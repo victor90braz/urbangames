@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 const BrandStyle = styled.div`
-  display: flex;
-  width: 50%;
+  width: 200px;
 
   img {
     width: 100%;
-    height: 100%;
     object-fit: contain;
   }
 `;
