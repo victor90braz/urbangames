@@ -5,9 +5,7 @@ function Brand() {
   const pathImage = `images/${BrandAtributes.image}`;
   return (
     <BrandStyle>
-      <div className="brand">
-        <img src={pathImage} alt={BrandAtributes.alt} />
-      </div>
+      <img src={pathImage} alt={BrandAtributes.alt} />
     </BrandStyle>
   );
 }

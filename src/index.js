@@ -1,12 +1,12 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import reportWebVitals from "./reportWebVitals";
 import renderContainer from "./root/root";
-import App from "./App/App";
-import IndexStyle from "./indexStyle";
+import "./index.css";
+import App from "./App";
 
 renderContainer.render(
-  <IndexStyle>
+  <StrictMode>
     <App />
-  </IndexStyle>
+  </StrictMode>
 );
 reportWebVitals();
