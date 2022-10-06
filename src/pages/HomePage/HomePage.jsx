@@ -11,34 +11,40 @@ import Download from "../../components/Download/Download";
 function HomePage() {
   return (
     <HomePageStyle>
-      <div className="container-image">
-        <div className="container-text">
-          <h2>{AssetsContainerText.title}</h2>
-          <h3>{AssetsContainerText.text}</h3>
+      <section>
+        <div className="container-image">
+          <div className="container-text">
+            <h2>{AssetsContainerText.title}</h2>
+            <h3>{AssetsContainerText.text}</h3>
 
-          <button type="button" disabled>
-            <Download />
-          </button>
+            <button type="button" disabled>
+              <Download />
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <Slides />
+      <section className="section-slides">
+        <Slides />
+      </section>
 
-      <div className="card">
-        <h3 className="card-title">{AssetsCardTitle.title}</h3>
-        <p className="card-title">{AssetsCardTitle.text}</p>
-      </div>
-
-      {AssetsCard.map((item) => (
-        <div className="card" key={item.id}>
-          <img className="card-img-top" src={item.image} alt="Card cap" />
-          <h3 className="card-title">{item.title}</h3>
+      <section className="section-card">
+        <div className="card">
+          <h3 className="card-title">{AssetsCardTitle.title}</h3>
+          <p className="card-title">{AssetsCardTitle.text}</p>
         </div>
-      ))}
 
-      <button type="button" disabled>
-        <Download />
-      </button>
+        {AssetsCard.map((item) => (
+          <div className="card" key={item.id}>
+            <img className="card-img-top" src={item.image} alt="Card cap" />
+            <h3 className="card-title">{item.title}</h3>
+          </div>
+        ))}
+
+        <button type="button" disabled>
+          <Download />
+        </button>
+      </section>
     </HomePageStyle>
   );
 }
