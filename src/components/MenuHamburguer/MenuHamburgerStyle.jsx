@@ -4,7 +4,7 @@ const MenuHamburgerStyle = styled.div`
   .menu-icon {
     width: 100%;
     height: 70px;
-    color: white;
+    color: black;
   }
 `;
 

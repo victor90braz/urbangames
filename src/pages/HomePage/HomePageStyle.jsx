@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const HomePageStyle = styled.div`
+  margin: 10px;
+
   h2 {
     font-size: 50px;
   }
