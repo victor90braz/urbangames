@@ -24,7 +24,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section-slides">
+      <section>
         <Slides />
       </section>
 
@@ -35,17 +35,13 @@ function HomePage() {
         </div>
       </section>
 
-      <section>
+      <section className="section-card-cap">
         {AssetsCard.map((item) => (
-          <div className="card" key={item.id}>
+          <div className="card-cap" key={item.id}>
             <img className="card-img-top" src={item.image} alt="Card cap" />
             <h3 className="card-title">{item.title}</h3>
           </div>
         ))}
-
-        <button type="button" disabled>
-          <Download />
-        </button>
       </section>
     </HomePageStyle>
   );

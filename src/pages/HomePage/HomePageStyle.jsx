@@ -65,6 +65,16 @@ const HomePageStyle = styled.div`
     align-items: center;
   }
 
+  .section-card-cap {
+    .card-cap {
+      h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
   @media ${devices.laptop} {
     .container-text {
       h2,
@@ -81,6 +91,7 @@ const HomePageStyle = styled.div`
       height: 38vh;
       width: 100%;
     }
+
     .carousel-item {
       width: 100%;
       height: 50vh;
@@ -95,6 +106,32 @@ const HomePageStyle = styled.div`
         .card-img-top {
           width: 80vw;
         }
+      }
+    }
+
+    .section-card {
+      .card {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .section-card-cap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+
+      h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card-img-top {
+        width: 100%;
+        object-fit: cover;
       }
     }
   }
