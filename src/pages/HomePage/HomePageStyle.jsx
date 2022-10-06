@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import devices from "../../StyleComponents/StyleComponents";
 
 const HomePageStyle = styled.div`
   margin: 10px;
@@ -62,6 +63,40 @@ const HomePageStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media ${devices.laptop} {
+    .container-text {
+      h2,
+      h3 {
+        font-size: 3.2rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+      }
+    }
+
+    .container-image {
+      height: 38vh;
+      width: 100%;
+    }
+    .carousel-item {
+      width: 100%;
+      height: 50vh;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .card-image {
+        margin-bottom: 0;
+        .card-img-top {
+          width: 80vw;
+        }
+      }
+    }
   }
 `;
 
