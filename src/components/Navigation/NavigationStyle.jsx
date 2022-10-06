@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import devices from "../../StyleComponents/StyleComponents";
+import devices from "../../Utils/MediaQueries/MediaQueries";
 
 const NavigationStyle = styled.header`
   display: flex;
