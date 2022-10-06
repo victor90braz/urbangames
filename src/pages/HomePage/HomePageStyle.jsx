@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import devices from "../../StyleComponents/StyleComponents";
+import devices from "../../Utils/MediaQueries/MediaQueries";
 
 const HomePageStyle = styled.div`
   margin: 10px;
