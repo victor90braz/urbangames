@@ -33,7 +33,9 @@ function HomePage() {
           <h3 className="card-title">{AssetsCardTitle.title}</h3>
           <p className="card-title">{AssetsCardTitle.text}</p>
         </div>
+      </section>
 
+      <section>
         {AssetsCard.map((item) => (
           <div className="card" key={item.id}>
             <img className="card-img-top" src={item.image} alt="Card cap" />
