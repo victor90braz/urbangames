@@ -5,8 +5,8 @@ describe("Footer", () => {
   it("render", () => {
     render(<Footer />);
 
-    const expectedText = screen.getByText("Home");
+    const expectedIcon = screen.getByTestId("idLinkedin");
 
-    expect(expectedText).toBeInTheDocument();
+    expect(expectedIcon).toBeInTheDocument();
   });
 });
