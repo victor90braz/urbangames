@@ -1,11 +1,15 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it } from "vitest";
 import HomePage from "./HomePage";
 
 describe("HomePage", () => {
-  it("should render the HomePageAssets", () => {
+  it("should contain an element button to be disabled", () => {
     render(<HomePage />);
 
-    screen.getAllByRole("button");
+    const ariaLabel = /button-download/i;
+    const buttonElement = screen.getByRole("button", {
+      name: ariaLabel,
+    });
+
+    expect(buttonElement).toBeDisabled();
   });
 });

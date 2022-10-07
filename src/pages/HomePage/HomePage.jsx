@@ -17,7 +17,7 @@ function HomePage() {
             <h2>{AssetsContainerText.title}</h2>
             <h3>{AssetsContainerText.text}</h3>
 
-            <button type="button" disabled>
+            <button type="button" aria-label="button-download" disabled>
               <Download />
             </button>
           </div>
