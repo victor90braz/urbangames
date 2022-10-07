@@ -1,27 +1,44 @@
-export const ListAssets = [
+export const ListPagesAssets = [
   {
     href: "#",
-    text: "Home",
+    name: "Home",
     id: 1,
   },
   {
     href: "#",
-    text: "Services",
+    name: "Services",
     id: 2,
   },
   {
     href: "#",
-    text: "About",
+    name: "About",
     id: 3,
   },
   {
     href: "#",
-    text: "Terms",
+    name: "Terms",
     id: 4,
   },
   {
     href: "#",
-    text: "Privacy Policy",
+    name: "Privacy Policy",
     id: 5,
   },
 ];
+
+export const SocialAssets = {
+  atributes: {
+    target: "_blank",
+    rel: "noopener noreferrer",
+    size: 50,
+    copyright: "Copyright 2022 Victor Braz",
+  },
+  grLinkedin: {
+    href: "https://www.linkedin.com/in/victor-braz/",
+    dataTestid: "idLinkedin",
+  },
+  bsGithub: {
+    href: "https://github.com/victor90braz",
+    dataTestid: "idGithub",
+  },
+};
