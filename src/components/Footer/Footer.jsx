@@ -1,6 +1,7 @@
 import FooterStyle from "./FooterStyle";
 import { GrLinkedin } from "react-icons/gr";
 import { BsGithub } from "react-icons/bs";
+import { ListAssets } from "./FooterAssets";
 
 const Footer = () => {
   return (
@@ -12,36 +13,27 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GrLinkedin size={50} />
+            <GrLinkedin size={50} data-testid="idLinkedin" />
           </a>
           <a
             href="https://github.com/victor90braz"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsGithub size={50} />
+            <BsGithub size={50} data-testid="idGithub" />
           </a>
         </div>
 
         <ul className="list">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Terms</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
+          {ListAssets.map((item) => (
+            <li key={item.id}>
+              <a href={item.href}>{item.text}</a>
+            </li>
+          ))}
         </ul>
+
         <p className="copyright">
-          <small>&copy; Copyright 2022 Victor Braz</small>
+          <small>Copyright 2022 Victor Braz</small>
         </p>
       </div>
     </FooterStyle>

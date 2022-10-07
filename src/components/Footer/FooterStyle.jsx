@@ -36,6 +36,7 @@ const FooterStyle = styled.div`
 
   .footer ul a:hover {
     opacity: 1;
+    background: #00c8fffa;
   }
 
   .copyright {
