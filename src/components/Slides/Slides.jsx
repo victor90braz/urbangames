@@ -2,7 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SlidesImages from "./SlidesAssets";
 
-function Slides() {
+const Slides = () => {
   return (
     <Carousel fade>
       {SlidesImages.map((slide) => (
@@ -20,6 +20,6 @@ function Slides() {
       ))}
     </Carousel>
   );
-}
+};
 
 export default Slides;

@@ -8,7 +8,7 @@ import {
 } from "./HomePageAssets";
 import Download from "../../components/Download/Download";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <HomePageStyle>
       <section>
@@ -45,6 +45,6 @@ function HomePage() {
       </section>
     </HomePageStyle>
   );
-}
+};
 
 export default HomePage;
