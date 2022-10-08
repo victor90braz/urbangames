@@ -9,4 +9,13 @@ describe("Footer", () => {
 
     expect(expectedIcon).toBeInTheDocument();
   });
+
+  it("should have 5 items when using querySelectorAll", () => {
+    const { container } = render(<Footer />);
+
+    const expectedItems = '[role="listitem"]';
+    const li = container.querySelectorAll(expectedItems);
+
+    expect(li.length).toEqual(5);
+  });
 });

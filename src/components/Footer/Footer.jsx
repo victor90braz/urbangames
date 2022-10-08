@@ -31,10 +31,12 @@ const Footer = () => {
           </a>
         </div>
 
-        <ul className="list">
+        <ul className="list" role="list">
           {ListPagesAssets.map((page) => (
             <li key={page.id}>
-              <a href={page.href}>{page.name}</a>
+              <a href={page.href} role="listitem">
+                {page.name}
+              </a>
             </li>
           ))}
         </ul>

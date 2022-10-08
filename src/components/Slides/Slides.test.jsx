@@ -4,14 +4,22 @@ import Slides from "./Slides";
 describe("Slides", () => {
   afterEach(cleanup);
 
-  it("should render an element img", () => {
+  it("should render 3 elements img's", () => {
     render(<Slides />);
 
-    screen.getAllByRole("img");
+    const element = "img";
+    const imageLength = 3;
+
+    const image = screen.getAllByRole(element);
+    expect(image).toHaveLength(imageLength);
   });
 
-  it("should render an element h3", () => {
+  it("should render 3 elements h3", () => {
     render(<Slides />);
-    screen.getAllByRole("heading", { level: 3 });
+
+    const titlesLength = 3;
+    const titles = screen.getAllByRole("heading", { level: 3 });
+
+    expect(titles).toHaveLength(titlesLength);
   });
 });

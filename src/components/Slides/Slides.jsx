@@ -9,9 +9,10 @@ const Slides = () => {
         <Carousel.Item key={slide.id}>
           <img
             className="d-block w-100"
-            src={`/images/${slide.image}`}
-            alt="First slide"
+            src={`images/${slide.image}`}
+            alt={slide.alt}
           />
+
           <Carousel.Caption>
             <h3>{slide.title}</h3>
             <p>{slide.description}</p>
