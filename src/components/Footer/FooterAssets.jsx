@@ -38,7 +38,7 @@ export const SocialAssets = {
     dataTestid: "idLinkedin",
   },
   bsGithub: {
-    href: "https://github.com/victor90braz",
+    href: "https://github.com/victor90braz/urbangames",
     dataTestid: "idGithub",
   },
 };

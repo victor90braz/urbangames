@@ -19,6 +19,10 @@ Guiding Principles
 
 ## Currents Metrics
 
+# 🚀 Lighthouse
+
+  <img src="./public/images/lighthouse.jpg" width="600">
+
 # 🚀 TDD
 
   <img src="./public/images/tdd-test.jpg" width="600">
